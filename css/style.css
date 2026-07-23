@@ -62,13 +62,23 @@ header {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  background: #f6f8f3;
+  padding: 8px 16px;
+  border-radius: 10px;
 }
 
 .logo span {
   color: var(--color-accent);
+}
+
+.logo-img {
+  height: 30px;
+  display: block;
 }
 
 .nav-links {
@@ -298,6 +308,56 @@ section {
 .service-row p {
   color: var(--color-text-muted);
   font-size: 0.92rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 780px;
+  padding-left: 28px;
+  border-left: 2px solid var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.timeline-item.highlight::before {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+.timeline-date {
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.timeline-content {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.timeline-item.highlight .timeline-content {
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 /* Contact */
