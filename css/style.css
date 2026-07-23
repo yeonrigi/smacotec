@@ -294,6 +294,11 @@ section {
   border-radius: var(--radius);
 }
 
+.service-row.single {
+  grid-template-columns: 1fr;
+  padding: 32px;
+}
+
 .service-row .num {
   font-weight: 800;
   color: var(--color-accent);
@@ -303,6 +308,15 @@ section {
 .service-row h3 {
   font-size: 1.05rem;
   margin-bottom: 6px;
+}
+
+.service-row.single h3 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.service-row.single p {
+  margin-bottom: 18px;
 }
 
 .service-row p {
